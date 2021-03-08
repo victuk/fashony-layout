@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    {% include './includess/htmlLinks.html' %}
+    {% block title %}{% endblock %}
+</head>
+<body>
+    <div class="site-wrap">
+        
+        {% block content %}
+        {% block header %}
+        {% endblock %}
+        {% endblock %}
+        {% include './includess/dfooter.html' %}
+    </div>
+    
+    
+{% include './includess/scripts.html' %}
+</body>
+</html>

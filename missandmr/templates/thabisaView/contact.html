@@ -1,0 +1,44 @@
+{% extends './main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="site-wrapper">
+	{% include './includess/dheader.html' %}
+	<header class="main-header author-head " style="background-image: url({% static 'assets/img/intro.jpg' %})">
+	</header>
+	<section class="author-profile inner">
+	<figure class="author-image">
+	<div class="img" style="background-image: url({% static 'assets/img/intro.jpg' %})">
+		<span class="hidden">David's Picture</span>
+	</div>
+	</figure>
+	<h1 class="author-title">David</h1>
+	<h2 class="author-bio">The blog combining journalist David&#x27;s years of experience covering fashion and culture for among others. Read my blog and you will learn how to become a fashion editor.</h2>
+	<div class="author-meta">
+		<span class="author-location icon-location">Planet Earth</span>
+		<span class="author-link icon-link"><a href="http://www.wowthemes.net">http://www.wowthemes.net</a></span>
+		<span class="author-stats"><i class="icon-stats"></i> 13 posts</span>
+	</div>
+	</section>
+	<main class="content" style="display: flex; padding: 10px; padding-bottom: 40px;" role="main">
+		<form action="{% url 'contact' %}" style="margin-right: auto; margin-left: auto;" method="post">
+			{% csrf_token %}
+			{{form}}
+			<input type="submit" value="Submit">
+		</form>
+		<style>
+			#id_fullName, #id_email, #id_message{
+				display: block;
+				padding: 5px;
+				margin: 5px 0px 5px 0px;
+				border: 1px solid black;
+				border-radius: 10px;	
+				width: 80%;
+			}
+		</style>
+	</main>
+
+</div>
+{% endblock %}

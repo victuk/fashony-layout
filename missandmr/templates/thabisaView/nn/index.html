@@ -1,0 +1,290 @@
+{% extends './main.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- <div class="site-wrap"> -->
+<div class="site-mobile-menu">
+<div class="site-mobile-menu-header">
+<div class="site-mobile-menu-close mt-3">
+<span class="icon-close2 js-menu-toggle"></span>
+</div>
+</div>
+<div class="site-mobile-menu-body"></div>
+</div> <!-- .site-mobile-menu -->
+
+{% include './includess/dheader.html' %}
+
+<div style="height: 113px;"></div>
+<div class="slide-one-item home-slider owl-carousel">
+<div class="site-blocks-cover" style="background-image: url({% static 'images/homepage-pictures/IMG-20201107-WA0009.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="container">
+<div class="row align-items-center justify-content-center">
+<div class="col-md-7 text-center" data-aos="fade">
+    <h1 style="filter: brightness(100%);">Welcome To <br><strong>Winners Chapel, Eket</strong><br> Akwa Ibom State.
+    <br> <a class="btn btn-danger" href="{% url 'sermons' %}">View Latest Sermons</a>
+    <a class="btn btn-link" style="color: white; text-decoration: none;" href="{% url 'announcements' %}">View Announcements</a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<!-- IMG-20201107-WA0010.jpg -->
+<div class="site-blocks-cover" style="background-image: url({% static 'images/homepage-pictures/DJI_0574.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="container">
+    <div class="row align-items-center justify-content-center">
+    <div class="col-md-7 text-center" data-aos="fade">
+        <h1>
+            Have a <strong>Prayer Request?</strong>
+            <br> <a class="btn btn-danger" href="{% url 'prayerRequest' %}">Sumbit a Prayer Request</a> <br>
+        </h1>
+    </div>
+    </div>
+    </div>
+    </div>
+<div class="site-blocks-cover" style="background-image: url({% static 'images/homepage-pictures/DJI_0575.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="container">
+    <div class="row align-items-center justify-content-center">
+    <div class="col-md-7 text-center" data-aos="fade">
+        <h1>
+            Have a <strong>Testimoney?</strong>
+            <br> <a class="btn btn-danger" href="{% url 'testimoney' %}">Tell Us</a> <br>
+        </h1>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-12 bg-danger text-center p-3">
+        <marquee class="p-2" style="color: white; font-size: x-large;">Next Sunday 27th December, 2020 is our Holy Ghost Word
+            Loaded & Destiny molding Service. <b>It’s Our  END OF THE YEAR SPECIAL THANKSGIVING SERVICE.</b> 
+            Don’t miss this Destiny molding service and please come with a family.
+            <br> <b>1st service - 7:30am, 2nd service - 9:30am.</b></marquee>
+       <!-- <h3 style="color: white;"><p id="shilo-countdown" style="font-size: larger;"></p> <p style="font-size: smaller;"> 9th - 13 December 2020. </p></h3> -->
+    </div>
+</div>
+</div>
+
+ <!--<div class="container my-5" style="text-align: center;">
+     <div class="row">
+        <div class="col-md-6"><img id="countdown-picture" style="width: 100%; height: auto; background-size: contain;" class="card-img-top" alt="..."></div>
+        <div class="col-md-6"><img src="images/covenant day of settlement.png" style="width: 100%; height: auto; background-size: contain;" class="card-img-top mt-2" alt="...">
+        
+        </div>
+    </div> 
+        <img id="countdown-picture" style="width: 50%; height: auto; background-size: contain;" class="card-img-top" alt="...">
+
+    </div>-->
+
+<div class="site-section bg-light">
+<div class="container">
+
+
+<div class="row">
+    <div class="col-md-12 mx-auto text-left mb-5 section-heading">
+    <h2 class="mb-5">Pastor's Desk</h2>
+    <div class="card mb-3">
+        <img src="{% static 'images/winners-chapel-logo/pastors-pic.jpeg' %}" style="border-radius: 50%; width: 150px; height: 150px;" class="card-img-top m-5" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Breaking Limits greetings in the name of Jesus.</h5>
+          <p class="card-text" id="pastors-desk2">
+
+          </p>
+            <button onclick="myFunctionTwo()" class="btn btn-danger" id="myBtn2">Read more</button>
+           <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+<div class="card col-md-12">
+    <div class="text-center p-3">
+        <img src="{% static 'God-at-work/Gow-pic.jpg' %}" style="border-radius: 20px;" class="card-img-top" alt="...">
+    </div>
+    
+    <div class="card-body">
+      <h5 class="card-title">God At Work</h5>
+      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+      <p class="card-text">Our God at work magazine for the month of November is available for download.</p>
+      <a href="{% static 'God-at-work/God-at-work.pdf' %}" class="btn btn-danger">Download Here</a>
+      <!-- <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+
+<!-- <div class="row">
+<div class="col-12 text-center mb-3">
+<h3 class="h5"><span class="text-uppercase">&ldquo;Thy Kingdom Come&rdquo;</span> &mdash; <span class="small"><em>by</em> Pastor Edward Cane</span></h3>
+</div>
+<div class="col-12">
+<div class="player">
+<audio id="player2" preload="none" controls style="max-width: 100%">
+<source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
+</audio>
+</div>
+</div>
+</div> -->
+
+</div>
+</div>
+
+<!--<div class="site-section">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-6 mb-5 mb-md-0">
+<div class="img-border">
+ <a href="https://vimeo.com/28959265" class="popup-vimeo image-play">
+<span class="icon-wrap">
+<span class="icon icon-play"></span>
+</span>
+<img src="images/about_3.jpg" alt="" class="img-fluid">
+</a> 
+
+<img src="images/IMG-20201110-WA0013.jpg" alt="" class="img-fluid">
+
+</div>
+</div>
+<div class="col-md-5 ml-auto">
+<h2 class="h2 mb-3">Shiloh 2020</h2>
+<p class="h5">9th to 13th December, 2020.</p>
+<p class="mb-4">
+    <h4>Feautring:</h4>
+    <ul>
+        <li>Word Sessions</li>
+        <li>Specialized Sessions</li>
+        <li>Special Ministrations</li>
+        <li>Business Summit</li>
+        <li>Youth Alive Forum</li>
+    </ul>
+    <div>
+        Venue: Living Faith Church a.k.a Winners Chapel Km 6 Eket Oron Ata Idung Afaha.
+    </div>    
+</p>
+<p><a href="images/video/VID-20201113-WA0029.mp4" style="color:rgb(223, 48, 48)" class="popup-vimeo text-uppercase">Watch Video <span class="icon-arrow-right small"></span></a></p>
+</div>
+</div>
+</div>
+</div>-->
+
+<div class="site-section site-block-feature bg-light">
+<div class="container">
+<div class="d-block d-md-flex border-bottom">
+<div class="text-center p-4 item border-right">
+<span class="flaticon-paper-plane display-3 mb-3 d-block text-danger"></span>
+<h2 class="h5 text-uppercase">Prayer Requests</h2>
+<p>Feel free to submit a prayer request to us...</p>
+<p><a href="{% url 'prayerRequest' %}" style="color: rgb(223, 48, 48);">Submit a prayer request <span class="icon-arrow-right small"></span></a></p>
+</div>
+<div class="text-center p-4 item">
+<span class="flaticon-chat-1 display-3 mb-3 d-block text-danger"></span>
+<h2 class="h5 text-uppercase">Satellite Felowship Lists</h2>
+<p>View a list of our various satellite fellowship venues in in Eket.</p>
+<p><a href="{% url 'fellowship' %}" style="color: rgb(223, 48, 48);">View List <span class="icon-arrow-right small"></span></a></p>
+</div>
+</div>
+<div class="d-block d-md-flex">
+<div class="text-center p-4 item border-right">
+<span class="flaticon-speaker display-3 mb-3 d-block text-danger"></span>
+<h2 class="h5 text-uppercase">View/listen To Our Sermons</h2>
+<p>You can listen to our sermons here in both audio and video formats</p>
+<p><a href="{% url 'sermons' %}" style="color: rgb(223, 48, 48);">Sermons <span class="icon-arrow-right small"></span></a></p>
+</div>
+<div class="text-center p-4 item">
+<span class="flaticon-avatar display-3 mb-3 d-block text-danger"></span>
+<h2 class="h5 text-uppercase">Join Our Church</h2>
+<p>We are delighted to have you here In Winners Chapel, Eket. Join Us</p>
+<p><a href="{% url 'joinUs' %}" style="color: rgb(223, 48, 48);">Click Here to Join Us <span class="icon-arrow-right small"></span></a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="site-section block-15">
+<div class="container">
+<div class="row">
+<div class="col-md-6 mx-auto text-center mb-5 section-heading">
+<h2>Upcoming Events</h2>
+</div>
+</div>
+
+<div class="p-1 text-center"><a href="{% url 'announcements' %}" style="color: red;">View Full Announcements</a></div>
+
+<div class="nonloop-block-15 owl-carousel">
+
+
+<div class="media-with-text">
+<div class="img-border-sm mb-4">
+<a href="{% url 'announcements' %}" class="popup-vimeo image-play">
+<img src="{% static 'images/homepage-pictures/DJI_0573-2.jpg' %}" alt="" class="img-fluid">
+</a>
+</div>
+<h2 class="heading mb-0" style="color: rgb(223, 48, 48);">NEXT SUNDAY AT LFC EKET:</h2>
+<!-- <span class="mb-3 d-block post-date">January 20, 2018 &bullet; By <a href="#">Josh Holmes</a></span> -->
+<p>
+    Next Sunday 20th December, 2020 is our Holy Ghost Word
+             Loaded & Destiny molding Service. <b>It’s Our  SPECIAL HOLY COMMUNION SERVICE.</b> 
+             Don’t miss this Destiny molding service and please come with a family.
+             <br> <b>1st service - 7:30am, 2nd service - 9:30am.</b>
+</p>
+</div>
+<div class="media-with-text">
+<div class="img-border-sm mb-4">
+<a href="{% url 'announcements' %}" class="popup-vimeo image-play">
+<img src="{% static 'images/homepage-pictures/DJI_0573-2.jpg' %}" alt="" class="img-fluid">
+</a>
+</div>
+<h2 class="heading mb-0" style="color: rgb(223, 48, 48);">PRAYER BAND MEETING</h2>
+<!-- <span class="mb-3 d-block post-date">January 20, 2018 &bullet; By <a href="#">Glory Jimmy</a></span> -->
+<p>
+    Prayer Band meeting holds every Thursday By 5:00pm -6.15pm at Dominion Hall. New members are invited.
+</p>
+</div>
+<div class="media-with-text">
+<div class="img-border-sm mb-4">
+<a href="{% url 'announcements' %}" class="popup-vimeo image-play">
+<img src="{% static 'images/homepage-pictures/DJI_0573-2.jpg' %}" alt="" class="img-fluid">
+</a>
+</div>
+<h2 class="heading mb-0" style="color: rgb(223, 48, 48);">WINNERS’ SATELLITE FELLOWSHIP</h2>
+<!-- <span class="mb-3 d-block post-date">January 20, 2018 &bullet; By <a href="#">Glory Jimmy</a></span> -->
+<p>Our house to house fellowship (WSF) holds every Saturday. Locate any Home cell fellowship close to you and start fellowshipping with the brethren there. Time: 5:00pm.
+</p>
+</div>
+
+<div class="media-with-text">
+    <div class="img-border-sm mb-4">
+    <a href="{% url 'announcements' %}" class="popup-vimeo image-play">
+    <img src="{% static 'images/homepage-pictures/DJI_0573-2.jpg' %}" alt="" class="img-fluid">
+    </a>
+    </div>
+    <h2 class="heading mb-0" style="color: rgb(223, 48, 48);">FOUNDATION CLASS:</h2>
+    <!-- <span class="mb-3 d-block post-date">January 20, 2018 &bullet; By <a href="#">Glory Jimmy</a></span> -->
+    <p>Foundation class for every new converts and new members holds Monday. Time 5:00pm.
+        <br>Come with your Bible.
+    </p>
+    </div>
+
+</div>
+<div class="row">
+</div>
+</div>
+</div>
+
+
+<div class="container">
+    <h2 class="mb-5">Get Direction</h2>
+</div>
+
+<div class="container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.618778229128!2d7.9732033137183675!3d4.661871596613647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1067c2b8aa497205%3A0xc9f145771d893525!2sLiving%20Faith%20Church%20Eket!5e0!3m2!1sen!2sng!4v1605072257858!5m2!1sen!2sng" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+
+<!-- </div> -->
+{% endblock %}
+
+

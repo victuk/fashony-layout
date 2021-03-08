@@ -1,0 +1,100 @@
+{% extends './main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="site-wrapper">
+	{% include './includess/dheader.html' %}
+<header class="main-header " style="background-image: url({% static 'assets/img/intro.jpg' %})">
+	<div class="vertical">
+		<div class="main-header-content inner">
+			<h1 class="page-title">Fashion Critiques</h1>
+			<div class="entry-title-divider">
+				<span></span><span></span><span></span>
+			</div>
+			<h2 class="page-description">Thoughts, reviews and ideas since 1999.</h2>
+		</div>
+	</div>
+	<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+	</header>
+	<main class="content" role="main" style="margin-bottom: 100px;">
+		<div style="text-align: center; font-weight: bold; margin-bottom: 20px;" class="post-title">
+			Meet Our Contestants
+		</div>
+		<div class="grid">
+			{% for person in contestant %}
+			<div class="grid-item">
+				<article class="post">
+				<div class="wrapgriditem">
+					<div style="text-align:center;">
+						<img style="border-radius: 50%; height: 150px; width: 150px;" src="{{person.picture.url}}" alt="David" nopin="nopin"/>
+					</div>
+					<div style="text-align: center;">
+						
+						<div style="font-size:small">Name: {{person.name}}</div>
+						<div>Contestant's ID: {{person.contestantsCode}}</div>
+						<div style="font-size:small">Gender: {{person.gender}}</div>
+					</div>
+					<div style="padding: 30px; text-align: center;">
+						{{person.description}}
+					</div>
+				</div>
+				</article>
+			</div>
+			{% endfor %}
+			
+	
+		</div>
+		<!-- <nav class="pagination" role="navigation">
+		<span class="page-number">Page 1 of 2</span>
+		<a class="older-posts" href="#">Older Posts &rarr;</a>
+		</nav> -->
+		</main>
+	<main id="content" class="content" role="main">
+	<div class="wraps">
+		
+		<div>
+			<div style="text-align: center; font-weight: bold;" class="post-title">
+				About Miss And Mr SA Provincial Legendary
+			</div>
+			<div style="padding: 30px;">
+				Miss And Mr SA Provincial Legendary is an annual beauty pagent competition 
+				hosted by Miss. Thabisa.
+			</div>
+		</div>
+
+		<div>
+			<div style="text-align: center; font-weight: bold; padding: 30px;" class="post-title">
+				Recent Videos
+			</div>
+		</div>
+
+		<div class="grid">
+			{% for video in videos %}
+			<div class="grid-item">
+				<article class="post">
+				
+					
+      <div class="col-md-4 py-5" style="width: 100%; height: 200px;">
+		<iframe width="100%" height="100%" src="{{ video.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+      </div>
+      
+	  <div style="padding: 10px;">{{ video.title }}</div>
+				</article>
+			</div>
+			{% endfor %}
+		</div>
+		
+		<!-- <nav class="pagination" role="navigation">
+		<span class="page-number">Page 1 of 2</span>
+		<a class="older-posts" href="page2.html">Older Posts &rarr;</a>
+		</nav> -->
+	</div>
+	</main>
+	
+</div>
+
+
+{% endblock %}
