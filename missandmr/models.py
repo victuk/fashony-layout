@@ -10,13 +10,14 @@ class youtubelink(models.Model):
 
 class contestant(models.Model):
     name = models.CharField(max_length=50, default='')
-    picture = models.ImageField(upload_to='images/')
+    picture = models.ImageField(upload_to='images/', default='')
     contestantsCode = models.CharField(max_length=455, default='')
     gender = models.CharField(choices = [
         ('Male', 'Male'),
         ('Female', 'Female')
-    ], max_length = 10, default="Unselected")
+    ], max_length = 10, default="Male")
     description = models.TextField(max_length=455, default='')
+    proofOfPayment = models.ImageField(upload_to='images/proof-of-payment', default='')
     def __str__(self):
         return self.name
 

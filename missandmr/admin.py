@@ -6,3 +6,5 @@ from .models import contestant, youtubelink, contact
 admin.site.register(contestant)
 admin.site.register(youtubelink)
 admin.site.register(contact)
+
+admin.site.site_header = 'Fashion Admin Page'

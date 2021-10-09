@@ -1,10 +1,10 @@
 {% block header %}
 {% load static %}
 <nav class="main-nav overlay clearfix">
-	<a class="blog-logo" href="index.html"><img src="{% static 'assets/img/logo.png' %}" style="width: 90px; height: 55px;" alt="Fashion Critiques"/></a>
-	<ul id="menu">
-		<li class="nav-home nav-current" role="presentation"><a href="{% url 'index' %}">Home</a></li>
-		<!-- <li class="nav-article-example" role="presentation"><a href="{% url 'contestants' %}">2021 Contestants</a></li> -->
+	<a class="blog-logo" href="index.html"><img src="{% static 'assets/img/logo.jpg' %}" style="width: 90px; height: 55px;" alt="Fashion Critiques"/></a>
+	<ul id="menu"> <!--nav-current -->
+		<li class="nav-home" role="presentation"><a href="{% url 'index' %}">Home</a></li>
+		<li class="nav-article-example" role="presentation"><a href="{% url 'contestants' %}">2021 Contestants</a></li>
 		<li class="nav-about-us" role="presentation"><a href="{% url 'about' %}">About Us</a></li>
 		<li class="nav-author-page" role="presentation"><a href="{% url 'contact' %}">Contact</a></li>
 		<span class="socialheader">

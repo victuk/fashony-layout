@@ -25,111 +25,12 @@
 	<main class="content" role="main">
 		<div class="grid">
 			<div class="grid-item">
-				<article class="post">
-				<div class="wrapgriditem">
-					<div style="text-align:center;">
-						<img style="border-radius: 50%; height: 100px; width: 100px;" src="{% static 'assets/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
-					</div>
-					<div style="text-align: center;">
-						<div style="font-size:small">Name:</div>
-						<div>Contestant's ID:</div>
-						<div style="font-size:small">Gender:</div>
-					</div>
-					<div style="padding: 30px;">
-						I am from akwa ibom state, my favourite dish is Rice and stew. Please, vote for me.
-					</div>
-				</div>
-				</article>
+				<form method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<input type="submit" value="Submit">
+				</form>
 			</div>
-			<div class="grid-item">
-				<article class="post tag-romance">
-				<div class="wrapgriditem">
-					<div style="text-align:center;">
-						<img style="border-radius: 50%; height: 100px; width: 100px;" src="{% static 'assets/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
-					</div>
-					<div style="text-align: center;">
-						<div style="font-size:small">Name:</div>
-						<div>Contestant's ID:</div>
-						<div style="font-size:small">Gender:</div>
-					</div>
-					<div style="padding: 30px;">
-						I am from akwa ibom state, my favourite dish is Rice and stew. Please, vote for me.
-					</div>
-				</div>
-				</article>
-			</div>
-			<div class="grid-item">
-				<article class="post">
-				<div class="wrapgriditem">
-					<div style="text-align:center;">
-						<img style="border-radius: 50%; height: 100px; width: 100px;" src="{% static 'assets/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
-					</div>
-					<div style="text-align: center;">
-						<div style="font-size:small">Name:</div>
-						<div>Contestant's ID:</div>
-						<div style="font-size:small">Gender:</div>
-					</div>
-					<div style="padding: 30px;">
-						I am from akwa ibom state, my favourite dish is Rice and stew. Please, vote for me.
-					</div>
-				</div>
-				</article>
-			</div>
-			<div class="grid-item">
-				<article class="post tag-romance">
-				<div class="wrapgriditem">
-					<div style="text-align:center;">
-						<img style="border-radius: 50%; height: 100px; width: 100px;" src="{% static 'assets/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
-					</div>
-					<div style="text-align: center;">
-						<div style="font-size:small">Name:</div>
-						<div>Contestant's ID:</div>
-						<div style="font-size:small">Gender:</div>
-					</div>
-					<div style="padding: 30px;">
-						I am from akwa ibom state, my favourite dish is Rice and stew. Please, vote for me.
-					</div>
-				</div>
-				</article>
-			</div>
-			<div class="grid-item">
-				<article class="post tag-romance featured">
-				
-				<div class="wrapgriditem">
-					<div style="text-align:center;">
-						<img style="border-radius: 50%; height: 100px; width: 100px;" src="{% static 'assets/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
-					</div>
-					<div style="text-align: center;">
-						<div style="font-size:small">Name:</div>
-						<div>Contestant's ID:</div>
-						<div style="font-size:small">Gender:</div>
-					</div>
-					<div style="padding: 30px;">
-						I am from akwa ibom state, my favourite dish is Rice and stew. Please, vote for me.
-					</div>
-				</div>
-				</article>
-			</div>
-			<div class="grid-item">
-				<article class="post">
-				<div class="wrapgriditem">
-					<div style="text-align:center;">
-						<img style="border-radius: 50%; height: 100px; width: 100px;" src="{% static 'assets/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
-					</div>
-					<div style="text-align: center;">
-						<div style="font-size:small">Name:</div>
-						<div>Contestant's ID:</div>
-						<div style="font-size:small">Gender:</div>
-					</div>
-					<div style="padding: 30px;">
-						I am from akwa ibom state, my favourite dish is Rice and stew. Please, vote for me.
-					</div>
-				</div>
-				</article>
-			</div>
-			
-			
-			
 		</div>
 		<!-- <nav class="pagination" role="navigation">
 		<span class="page-number">Page 1 of 2</span>
