@@ -1,7 +1,7 @@
 {% block header %}
 {% load static %}
 <nav class="main-nav overlay clearfix">
-	<a class="blog-logo" href="index.html"><img src="{% static 'assets/img/logo.jpg' %}" style="width: 90px; height: 55px;" alt="Fashion Critiques"/></a>
+	<a class="blog-logo" href="{% url 'index' %}"><img src="{% static 'assets/img/logo.jpg' %}" style="width: 90px; height: 55px;" alt="Fashion Critiques"/></a>
 	<ul id="menu"> <!--nav-current -->
 		<li class="nav-home" role="presentation"><a href="{% url 'index' %}">Home</a></li>
 		<li class="nav-article-example" role="presentation"><a href="{% url 'contestants' %}"><script>document.write(new Date().getFullYear())</script> Contestants Form</a></li>
