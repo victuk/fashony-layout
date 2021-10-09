@@ -24,6 +24,7 @@
 		</div>
 		<div class="grid">
 			{% for person in contestant %}
+			{% if person.status == "Paid" %}
 			<div class="grid-item">
 				<article class="post">
 				<div class="wrapgriditem">
@@ -42,7 +43,11 @@
 				</div>
 				</article>
 			</div>
+			{% endif %}
 			{% endfor %}
+
+			
+
 			
 	
 		</div>
