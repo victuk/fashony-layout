@@ -25,7 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'w$xufo-y!!vd+m!05c!khp(-r-*mmctay4=w$*kmp&@v)%jwhr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+CSRF_COOKIE_SECURE = True
+
+SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = ['missandmrsa.herokuapp.com']
 
@@ -72,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'winnersDjaApp.wsgi.application'
+WSGI_APPLICATION = 'winnersDjaApp.wsgi.application'
 
 
 # Database
