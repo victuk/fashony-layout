@@ -7,4 +7,4 @@ admin.site.register(contestant)
 admin.site.register(youtubelink)
 admin.site.register(contact)
 
-admin.site.site_header = 'Fashion Admin Page'
+admin.site.site_header = 'Fashiony Admin Page'
