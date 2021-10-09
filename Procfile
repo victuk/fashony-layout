@@ -1,1 +1,1 @@
-web: gunicorn winnersDjaApp.wsgi
+web: gunicorn winnersDjaApp.wsgi 0.0.0.0:process.env.PORT
