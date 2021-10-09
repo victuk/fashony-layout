@@ -27,12 +27,6 @@ SECRET_KEY = 'w$xufo-y!!vd+m!05c!khp(-r-*mmctay4=w$*kmp&@v)%jwhr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CSRF_COOKIE_SECURE = True
-
-SECURE_SSL_REDIRECT = True
-
-SESSION_COOKIE_SECURE = True
-
 ALLOWED_HOSTS = ['missandmrsa.herokuapp.com']
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
