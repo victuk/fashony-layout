@@ -1,1 +1,0 @@
-web: gunicorn winnersDjaApp.wsgi --log-file -
