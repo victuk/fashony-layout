@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'winnersDjaApp.wsgi.application'
+# WSGI_APPLICATION = 'winnersDjaApp.wsgi.application'
 
 
 # Database
