@@ -23,16 +23,25 @@
 
 
 	<main class="content" role="main">
-		<div class="grid">
-			<div class="grid-item">
-				Apply for Fashony Layout 2021 Competition
-				<form method="POST" style="text-align: center;" enctype="multipart/form-data">
+		<div class="grid" >
+			<div class="grid-item" style="text-align: center; width: 100%; align-items: center;">
+				<h2 style="margin: 20px;">Apply for Fashony Layout <script>document.write(new Date().getFullYear())</script> Competition</h2>
+				<form method="POST" style="text-align: center; border-radius: 20px; padding: 20px; border: 5px dotted black" enctype="multipart/form-data">
 					{% csrf_token %}
 					{{ form.as_p }}
 					<input type="submit" value="Submit">
 				</form>
 			</div>
 		</div>
+		<style>
+			#id_name{
+				width: 300px;
+    			padding: 5px;
+			}
+			#id_description{
+				width: 300px;
+			}
+		</style>
 		<!-- <nav class="pagination" role="navigation">
 		<span class="page-number">Page 1 of 2</span>
 		<a class="older-posts" href="#">Older Posts &rarr;</a>
