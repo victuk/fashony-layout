@@ -9,6 +9,7 @@ class ContactForm(forms.Form):
 
 class ContestantForm(forms.Form):
     name = forms.CharField()
+    email = forms.CharField()
     picture = forms.ImageField()
     # contestantsCode = forms.CharField(widget = forms.HiddenInput())
     gender =  forms.CharField(widget=forms.Select(choices=[
@@ -16,7 +17,6 @@ class ContestantForm(forms.Form):
       ('female', 'Female')
     ]))
     description = forms.CharField(widget=forms.Textarea(attrs={'rows':2}))
-    proofOfPayment = forms.ImageField()
 
 
 

@@ -16,10 +16,10 @@ def contestantsView(request):
         contestantModel = contestant()
         if form.is_valid():
             contestantModel.name = form.cleaned_data['name']
+            contestantModel.email = form.cleaned_data['email']
             contestantModel.picture = form.cleaned_data['picture']
             contestantModel.contestantsCode = ''.join(str(e) for e in [random.randint(1, 9) for w in range(6)])
             contestantModel.description = form.cleaned_data['description']
-            contestantModel.proofOfPayment = form.cleaned_data['proofOfPayment']
             contestantModel.save()
             return HttpResponse("<script>alert('You have sucessfully submitted this form.'); location.replace('/')</script>")
         else:

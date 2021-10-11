@@ -26,10 +26,11 @@
 		<div class="grid" >
 			<div class="grid-item" style="text-align: center; width: 100%; align-items: center;">
 				<h2 style="margin: 20px;">Register for Fashony Layout <script>document.write(new Date().getFullYear())</script> Beauty Pageant Competition</h2>
-				<form method="POST" style="text-align: center; border-radius: 20px; padding: 20px; border: 5px dotted black" enctype="multipart/form-data">
+				<form id="paymentForm" method="POST" style="text-align: center; border-radius: 20px; padding: 20px; border: 5px dotted black" enctype="multipart/form-data">
 					{% csrf_token %}
 					{{ form.as_p }}
-					<input type="submit" value="Submit">
+					<!-- <input type="submit" value="Submit"> -->
+					<button type="submit" onclick="payWithPaystack()"> Submit and Pay </button>
 				</form>
 			</div>
 		</div>
@@ -61,6 +62,30 @@
 	
 	<div class="clearfix">
 	</div>
+	<script src="https://js.paystack.co/v1/inline.js"></script>
+	<script>
+		const paymentForm = document.getElementById('paymentForm');
+paymentForm.addEventListener("submit", payWithPaystack, false);
+function payWithPaystack(e) {
+  e.preventDefault();
+  let handler = PaystackPop.setup({
+    key: 'pk_test_7b253d342edfc96c63da319728cacdf4c862a559', // Replace with your public key
+    email: document.getElementById("id_email").value,
+    amount:  5000 * 100,
+    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    // label: "Optional string that replaces customer email"
+    onClose: function(){
+      alert('Window closed.');
+    },
+    callback: function(response){
+		document.getElementById("paymentForm").submit();
+      let message = 'Payment complete! Reference: ' + response.reference;
+      alert(message);
+    }
+  });
+  handler.openIframe();
+}
+	</script>
 	
 </div>
 
