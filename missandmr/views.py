@@ -21,7 +21,7 @@ def contestantsView(request):
             contestantModel.contestantsCode = ''.join(str(e) for e in [random.randint(1, 9) for w in range(6)])
             contestantModel.description = form.cleaned_data['description']
             contestantModel.save()
-            return HttpResponse("<script>alert('You have sucessfully submitted this form.'); location.replace('/')</script>")
+            return HttpResponse("<script>alert('Payment Successful.'); location.replace('/')</script>")
         else:
             return HttpResponse("<script>alert('There is an error, please try again later.')</script>")
 

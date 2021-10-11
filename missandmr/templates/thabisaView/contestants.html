@@ -78,9 +78,24 @@ function payWithPaystack(e) {
       alert('Window closed.');
     },
     callback: function(response){
-		document.getElementById("paymentForm").submit();
-      let message = 'Payment complete! Reference: ' + response.reference;
-      alert(message);
+		fetch('https://api.paystack.co/transaction/verify/' + response.reference, {
+			method: 'GET',
+			headers: {
+				Authorization: 'Bearer sk_test_dcd1ea88279fdd65d071124e787a4b7b4e2aab64'
+			}
+		}).then(data => {
+			if(data.status) {
+					document.getElementById("paymentForm").submit();
+			} else {
+				alert('There was an error confirming your payment');
+			}
+		})
+		// .then(d => {
+		// 	console.log(JSON.stringify(d));
+		// })
+	
+    //   let message = 'Payment complete! Reference: ' + response.reference;
+    //   alert(message);
     }
   });
   handler.openIframe();
